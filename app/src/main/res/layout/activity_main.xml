@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    tools:context=".MainActivity">
+
+    <!--  Guideline Horizontal 1  -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="120dp" />
+
+    <!--  Guideline Horizontal 2  -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineHorizontal2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="260dp" />
+
+    <!-- Guideline Vertical 1   -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <!-- Guideline Vertical 2   -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertical2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <!-- Guideline Vertical 3   -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineVertical3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <!--   Tombol Baris Pertama-->
+    <TextView
+        android:id="@+id/angka1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsmedium"
+        android:text="15,000 - 7500"
+        android:textColor="#6A6A6A"
+        android:textSize="28dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/guideline" />
+
+    <TextView
+        android:id="@+id/hasil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppinsbold"
+        android:text="7,500"
+        android:textSize="45dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/angka1"
+        app:layout_constraintTop_toBottomOf="@id/angka1" />
+
+    <View
+        android:id="@+id/black_line"
+        android:layout_width="170dp"
+        android:layout_height="6dp"
+        android:background="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hasil"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_AC"
+        style="@style/Button"
+        android:background="@drawable/orange_button"
+        android:text="AC"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineHorizontal2" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_persen"
+        style="@style/Button"
+        android:background="@drawable/white_button"
+        android:text="%"
+        android:textColor="@color/orange"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVertical2"
+        app:layout_constraintStart_toEndOf="@+id/guidelineVertical"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineHorizontal2" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_bagi"
+        style="@style/Button"
+        android:background="@drawable/white_button"
+        android:textColor="@color/orange"
+        android:text="/"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVertical3"
+        app:layout_constraintStart_toEndOf="@+id/guidelineVertical2"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineHorizontal2" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_X"
+        style="@style/Button"
+        android:background="@drawable/white_button"
+        android:text="x"
+        android:textColor="@color/orange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guidelineVertical3"
+        app:layout_constraintTop_toBottomOf="@+id/guidelineHorizontal2" />
+
+    <!--   Tombol Baris Kedua-->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_7"
+        style="@style/Button"
+        android:background="@drawable/white_button"
+        android:text="7"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_AC" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_8"
+        style="@style/Button"
+        android:background="@drawable/white_button"
+        android:text="8"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVertical2"
+        app:layout_constraintStart_toEndOf="@+id/guidelineVertical"
+        app:layout_constraintTop_toBottomOf="@+id/button_persen" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_9"
+        style="@style/Button"
+        android:background="@drawable/white_button"
+        android:text="9"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVertical3"
+        app:layout_constraintStart_toEndOf="@+id/guidelineVertical2"
+        app:layout_constraintTop_toBottomOf="@+id/button_bagi" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_tambah"
+        style="@style/Button"
+        android:background="@drawable/white_button"
+        android:text="+"
+        android:textColor="@color/orange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guidelineVertical3"
+        app:layout_constraintTop_toBottomOf="@+id/button_X" />
+
+    <!--   Tombol Baris Ketiga-->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_4"
+        style="@style/Button"
+        android:background="@drawable/white_button"
+        android:text="4"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_7" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_5"
+        style="@style/Button"
+        android:background="@drawable/white_button"
+        android:text="5"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVertical2"
+        app:layout_constraintStart_toEndOf="@+id/guidelineVertical"
+        app:layout_constraintTop_toBottomOf="@+id/button_8" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_6"
+        style="@style/Button"
+        android:background="@drawable/white_button"
+        android:text="6"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVertical3"
+        app:layout_constraintStart_toEndOf="@+id/guidelineVertical2"
+        app:layout_constraintTop_toBottomOf="@+id/button_9"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_minus"
+        style="@style/Button"
+        android:background="@drawable/white_button"
+        android:text="-"
+        android:textColor="@color/orange"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/guidelineVertical3"
+        app:layout_constraintTop_toBottomOf="@+id/button_tambah" />
+
+    <!--   Tombol Baris Keempat-->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_1"
+        style="@style/Button"
+        android:background="@drawable/white_button"
+        android:text="1"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button_4" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_2"
+        style="@style/Button"
+        android:background="@drawable/white_button"
+        android:text="2"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVertical2"
+        app:layout_constraintStart_toEndOf="@+id/guidelineVertical"
+        app:layout_constraintTop_toBottomOf="@+id/button_5" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_3"
+        style="@style/Button"
+        android:background="@drawable/white_button"
+        android:text="3"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVertical3"
+        app:layout_constraintStart_toEndOf="@+id/guidelineVertical2"
+        app:layout_constraintTop_toBottomOf="@+id/button_6" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_Equals"
+        style="@style/Button"
+        android:layout_height="140dp"
+        android:background="@drawable/orange_button"
+        android:text="="
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/button_minus"
+        app:layout_constraintStart_toStartOf="@id/button_minus"
+        app:layout_constraintTop_toBottomOf="@+id/button_minus" />
+
+    <!--   Tombol Baris Kelima-->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_0"
+        style="@style/Button"
+        android:layout_width="160dp"
+        android:background="@drawable/white_button"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="@+id/button_2"
+        app:layout_constraintStart_toStartOf="@id/button_1"
+        app:layout_constraintTop_toBottomOf="@+id/button_1" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/button_titik"
+        style="@style/Button"
+        android:layout_marginTop="20dp"
+        android:text="."
+        android:background="@drawable/white_button"
+        android:textColor="@color/orange"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineVertical3"
+        app:layout_constraintStart_toEndOf="@+id/guidelineVertical2"
+        app:layout_constraintTop_toBottomOf="@+id/button_3" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
